@@ -17,7 +17,8 @@ export class CreateUserDto {
   @MinLength(4)
   @MaxLength(20)
   @Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
-    message: "password too weak",
+    message:
+      "Senha muito fraca - mínimo 4 caracteres, 1 número, 1 letra maiúscula e 1 letra minúscula",
   })
   password: string;
 
